@@ -22,3 +22,18 @@ function countCats(/* matrix */) {
 module.exports = {
   countCats
 };
+
+countCats = (backyard) => {
+  let catsInArray = backyard.length;
+  let result = 0;
+  for(let i = 0; i < catsInArray; i++) {
+    let countArr = backyard[i];
+    for(let e = 0; e < countArr.length; e++) {
+      let elemArr = countArr[e];
+       if(elemArr === '^^') {
+         result = result + 1;
+      }
+    }
+  }
+  return result;
+}
